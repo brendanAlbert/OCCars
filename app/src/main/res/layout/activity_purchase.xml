@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.orangecoastcollege.cs273.balbert.occars.PurchaseActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/oc_cars_logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/enterPurchaseInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView"
+        android:gravity="center"
+        android:text="@string/instruction"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/carPriceViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enterPurchaseInfo"
+        android:padding="10dp"
+        android:text="@string/car_price"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/carPriceDollarSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@id/enterPurchaseInfo"
+        android:layout_toRightOf="@+id/carPriceViewText"
+        android:text="@string/dollar_sign" />
+
+    <EditText
+        android:id="@+id/carPriceEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:layout_below="@+id/enterPurchaseInfo"
+        android:layout_toRightOf="@+id/carPriceDollarSign" />
+
+    <TextView
+        android:id="@+id/downPaymentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carPriceViewText"
+        android:padding="10dp"
+        android:text="@string/down_payment"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/downPaymentDollarSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dollar_sign"
+        android:padding="5dp"
+        android:layout_below="@id/carPriceDollarSign"
+        android:layout_toRightOf="@id/downPaymentTextView" />
+
+    <EditText
+        android:id="@+id/downPaymentEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:padding="5dp"
+        android:layout_below="@id/carPriceEditText"
+        android:layout_toRightOf="@id/downPaymentDollarSign" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/radioGroup"
+        android:background="#536878"
+        android:padding="5dp"
+        android:layout_below="@id/downPaymentTextView"
+        android:layout_centerHorizontal="true" >
+
+        <RadioButton
+            android:id="@+id/threeYearRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/bone_white"
+            android:text="3 years"
+            android:buttonTint="@color/acid_green"/>
+
+        <RadioButton
+            android:id="@+id/fourYearRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/bone_white"
+            android:text="4 years"
+            android:buttonTint="@color/acid_green"/>
+
+        <RadioButton
+            android:id="@+id/fiveYearRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/bone_white"
+            android:text="5 years"
+            android:buttonTint="@color/acid_green"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/chooseLoanTermTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:padding="5dp"
+        android:text="@string/loan_term"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/loanReportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:elevation="14dp"
+        android:text="@string/loan_report_button_text"
+        android:onClick="reportSummary"/>
+
+</RelativeLayout>
