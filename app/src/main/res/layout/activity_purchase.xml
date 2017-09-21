@@ -53,7 +53,8 @@
         android:ems="8"
         android:inputType="number"
         android:layout_below="@+id/enterPurchaseInfo"
-        android:layout_toRightOf="@+id/carPriceDollarSign" />
+        android:layout_toRightOf="@+id/carPriceDollarSign"
+        android:layout_alignEnd="@id/enterPurchaseInfo"/>
 
     <TextView
         android:id="@+id/downPaymentTextView"

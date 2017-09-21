@@ -4,13 +4,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
 import java.text.NumberFormat;
 import java.util.Locale;
 
+/**
+ * PurchaseActivity can be thought of as the main Controller for OC Cars.
+ * PurchaseActivity is a class which represents the entry point for the app.
+ * The controller object instantiated from this class creates all
+ * the buttons, views and images seen by the View first seen when you open the app,
+ * activity_purchase.xml.
+ *
+ * In this Controller, we provide a way to format the currency amount entered by the user.
+ *
+ * We instantiate and create connections between the various TextViews and EditTexts in the View.
+ * When the user enters information into the EditTexts or interacts with the RadioButton group,
+ * this Controller takes that information and sends it to CarLoan.java to update the Model, and
+ * the updated information is routed back to the View.
+ */
 public class PurchaseActivity extends AppCompatActivity {
 
     private static final NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.getDefault());
@@ -21,12 +34,18 @@ public class PurchaseActivity extends AppCompatActivity {
     private RadioButton mThreeYearRadioButton;
     private RadioButton mFourYearRadioButton;
     private RadioButton mFiveYearRadioButton;
-    private Button mLoanReportButton;
-
 
     // Connection to the MODEL
     private CarLoan mCarLoan = new CarLoan();
 
+
+    /**
+     * onCreate(Bundle) is where we wire up connections to
+     * the EditTexts and RadioButtons in the View.
+     *
+     * @param savedInstanceState saves the state the app was in when the user
+     *                           sent it to the background.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +73,13 @@ public class PurchaseActivity extends AppCompatActivity {
             mCarLoan.setTerm(5);
     }
 
+    /**
+     * When the user taps the (Loan Report) button, the Model is updated (using a helper method)
+     * with the user's data.  The Model returns new calculated data.  Then a report is generated
+     * in the form of a long string with the user's unique information filled in.  This report
+     * is sent as an Intent to the next Activity, LoanSummaryActivity.java.
+     * @param v
+     */
     protected void reportSummary(View v) {
         collectCarLoanData();
 
