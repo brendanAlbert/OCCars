@@ -84,19 +84,18 @@ public class PurchaseActivity extends AppCompatActivity {
         collectCarLoanData();
 
         String report;
-        report  = getText(R.string.report_line1).toString() + currency.format(mCarLoan.monthlyPayment());
-        report += getText(R.string.report_line2).toString() + currency.format(mCarLoan.getPrice());
-        report += getText(R.string.report_line3).toString() + currency.format(mCarLoan.getDownPayment());
-        report += getText(R.string.report_line4).toString() + currency.format(mCarLoan.taxAmount());
-        report += getText(R.string.report_line5).toString() + currency.format(mCarLoan.totalAmount());
-        report += getText(R.string.report_line6).toString() + currency.format(mCarLoan.borrowedAmount());
-        report += getText(R.string.report_line7).toString() + currency.format(mCarLoan.interestAmount());
-        report += getText(R.string.report_line8).toString() + " " + mCarLoan.getTerm() + " years.";
+        report =  String.format("%s %s"  , getString(R.string.report_line1),currency.format(mCarLoan.monthlyPayment()));
+        report += String.format("%-30s%s", getString(R.string.report_line2),currency.format(mCarLoan.getPrice()));
+        report += String.format("%-30s%s", getString(R.string.report_line3),currency.format(mCarLoan.getDownPayment()));
+        report += String.format("%-30s%s", getString(R.string.report_line4),currency.format(mCarLoan.taxAmount()));
+        report += String.format("%-30s%s", getString(R.string.report_line5),currency.format(mCarLoan.totalAmount()));
+        report += String.format("%-30s%s", getString(R.string.report_line6),currency.format(mCarLoan.borrowedAmount()));
+        report += String.format("%-30s%s", getString(R.string.report_line7),currency.format(mCarLoan.interestAmount()));
+        report += String.format("%s %d years.", getString(R.string.report_line8),mCarLoan.getTerm());
 
-        report += getText(R.string.report_line9).toString();
-        report += getText(R.string.report_line10).toString();
-        report += getText(R.string.report_line11).toString();
-
+        report += getString(R.string.report_line9);
+        report += getString(R.string.report_line10);
+        report += getString(R.string.report_line11);
 
         // Intents start new activities and can share data with them
         Intent launchLoanSummary = new Intent(this, LoanSummaryActivity.class);

@@ -16,14 +16,14 @@
     <string name="go_data_entry">Return to Data Entry</string>
 
     <!-- REPORT STRINGS -->
-    <string name="report_line1"> \t<b>Monthly Payment:</b>\t</string>
-    <string name="report_line2"> \n\n\tCar Sticker Price: </string>
-    <string name="report_line3"> \n\tYou will put down: </string>
-    <string name="report_line4"> \n\tTaxed Amt:  </string>
-    <string name="report_line5">\n\tYour Cost: </string>
-    <string name="report_line6">\n\tBorrowed Amount: </string>
-    <string name="report_line7">\n\tInterest Amount: </string>
-    <string name="report_line8"> \n\n\tLoan Term is   </string>
+    <string name="report_line1"><b>Monthly Payment:</b></string>
+    <string name="report_line2"> \n\nCar Sticker Price: </string>
+    <string name="report_line3"> \nYou will put down: </string>
+    <string name="report_line4"> \nTaxed Amt:  </string>
+    <string name="report_line5">\nYour Cost: </string>
+    <string name="report_line6">\nBorrowed Amount: </string>
+    <string name="report_line7">\nInterest Amount: </string>
+    <string name="report_line8"> \n\nLoan Term is   </string>
 
     <string name="report_line9"> \n\nNOTE: </string>
     <string name="report_line10"> \n\n1. Loan information is made available by OC Cars.</string>

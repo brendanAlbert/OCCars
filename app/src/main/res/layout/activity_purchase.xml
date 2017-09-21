@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/enterPurchaseInfo"
-        android:padding="10dp"
+        android:padding="20dp"
         android:text="@string/car_price"
         android:textSize="10sp" />
 
@@ -54,14 +54,14 @@
         android:inputType="number"
         android:layout_below="@+id/enterPurchaseInfo"
         android:layout_toRightOf="@+id/carPriceDollarSign"
-        android:layout_alignEnd="@id/enterPurchaseInfo"/>
+        />
 
     <TextView
         android:id="@+id/downPaymentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/carPriceViewText"
-        android:padding="10dp"
+        android:padding="20dp"
         android:text="@string/down_payment"
         android:textSize="10sp" />
 
@@ -72,7 +72,8 @@
         android:text="@string/dollar_sign"
         android:padding="5dp"
         android:layout_below="@id/carPriceDollarSign"
-        android:layout_toRightOf="@id/downPaymentTextView" />
+        android:layout_toRightOf="@id/downPaymentTextView"
+        android:layout_alignBaseline="@id/downPaymentTextView"/>
 
     <EditText
         android:id="@+id/downPaymentEditText"
@@ -82,7 +83,9 @@
         android:inputType="number"
         android:padding="5dp"
         android:layout_below="@id/carPriceEditText"
-        android:layout_toRightOf="@id/downPaymentDollarSign" />
+        android:layout_alignBaseline="@id/downPaymentTextView"
+        android:layout_toRightOf="@id/downPaymentDollarSign"
+        />
 
     <RadioGroup
         android:layout_width="wrap_content"
